@@ -2,10 +2,11 @@
 <head>
     <title>Los métodos submit() y reset() del objeto Form</title>
     <script language="JavaScript" type="text/javascript">
+        //creamos la función que confirma el envío del formulario
         function funcion_button() {
             let submit_ok = confirm("Haga clic en Aceptar para enviar el formulario; " +
                                     "o en Cancelar para reinicializarlo:")
-            
+            //Si se acepta se envía el formualario, en caso contrario se cierra el pop up y se puede reescribir el mensaje
             if (submit_ok) {
                 document.forms[0].submit()
             }
@@ -16,6 +17,7 @@
     </script>
 </head>
 <body>
+    <!-- Se crea el formulario y se usa "mailto" para enviar la información directamente a el email que se selecciona -->
     <form action="mailto:nobody@punto.es" method="post">
         <input type="text" name="text_field" placeholder="Texto predeterminado">
         <br>

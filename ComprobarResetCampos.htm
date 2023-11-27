@@ -2,6 +2,7 @@
 <head>
     <title>El evento Reset del objeto Form</title>
     <script language="JavaScript" type="text/javascript">
+        //La función crea un pop up de confirmación para aceptar el reset de los datos del formulario
         function funcion_reset() {
 
             if (confirm("¿Está seguro de que quiere reinicializar todos los campos del formulario?")) {
@@ -15,6 +16,8 @@
     </script>
 </head>
 <body>
+    <!-- Se crea el formulario y se usa "mailto" para enviar la información directamente a el email que se selecciona,
+    y se llama a la función cuando se realice el reset -->
     <form action="mailto:nobody@punto.es" method="post" onReset="return funcion_reset()">
         <input type="text" name="text_field" placeholder="Texto predeterminado">
         <br>

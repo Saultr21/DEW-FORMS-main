@@ -6,8 +6,10 @@
     <title>Calculadora sencilla</title>
     <script>
         function calcula(operacion) {
+            //Recogemos los números con los que vamos a operar
             let operando1 = document.calc.operando1.value
             let operando2 = document.calc.operando2.value
+            //Usamos eval() para calcular la operación
             let result = eval(operando1 + operacion + operando2)
             document.calc.resultado.value = result
         } 
@@ -16,11 +18,13 @@
 <body>
     <h1>Calculadora sencilla</h1>
     <br>
+    <!-- Hcemos el form que recoja los números con los que se va a operar -->
     <form name="calc">
         <input type="Number" name="operando1" value="" size="12">
         <br>
         <input type="Number" name="operando2" value="" size="12">
         <br><br><br><br><br>
+        <!-- Creamos los diferentes botones llamarán a la función con sus respectivos signos -->
         <input type="Button" name="" value=" + " onclick="calcula('+')">
         <input type="Button" name="" value=" - " onclick="calcula('-')">
         <input type="Button" name="" value=" X " onclick="calcula('*')">
