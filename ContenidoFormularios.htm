@@ -1,0 +1,46 @@
+<html>
+<head>
+    <title>Contenido de formularios</title>
+</head>
+<body>
+    <!-- Primer formulario con cajas de texto -->
+    <form action="mailto:nobody@punto.es" method="post" name="ElPrimero">
+        Hola, soy el primer formulario del documento. Tengo algunos elementos: <p>
+        Caja 1: <input type="text" size="10" maxlength="10" name="Linea1"><br>
+        Caja 2: <input type="text" size="5" maxlength="10" name="Linea2"><br>
+        Caja 3: <input type="text" size="5" maxlength="10" name="Linea3">
+    </form>
+    <p>
+    <!-- Segundo formulario con botones de radio -->
+    <form action="mailto:nobody@punto.es" method="get" name="ElSegundo">
+        Hola, soy el segundo formulario del documento. Tengo algunos elementos: <p>
+        <input type="radio" name="Radio1" value="a" checked> Radio 1<br>
+        <input type="radio" name="Radio1" value="b"> Radio 2<br>
+        <input type="radio" name="Radio1" value="c"> Radio 3
+    </form>
+    <p>
+    <!-- Script en JavaScript para mostrar información de los formularios y sus elementos -->
+    <script language="JavaScript">
+		// Muestra la cantidad de formularios en la página
+        let i, j;
+        document.write('Tenemos ' + document.forms.length + ' formularios en el documento.' + '<hr>');
+
+        // Iterar a través de los formularios
+        for (i = 0; i < document.forms.length; i++) {
+            // Mostrar información sobre cada formulario
+            document.write('<p>document.forms[' + i + '].name = ' + document.forms[i].name + '<br>'); // Muestra el name del formulario
+            document.write('document.forms[' + i + '].action = ' + document.forms[i].action + '<br>'); // Muestra el action del formulario
+            document.write('document.forms[' + i + '].method = ' + document.forms[i].method + '<p>'); // Muestra el método del formulario
+            document.write('Tengo ' + document.forms[i].elements.length + ' elementos:<p>'); // Muestra la cantidad de elementos que tiene el formulario
+
+            // Iterar a través de los elementos de cada formulario
+            for (j = 0; j < document.forms[i].elements.length; j++) {
+                // Mostrar información sobre cada elemento
+                document.write('document.forms[' + i + '].elements[' + j + '].name = ' + document.forms[i].elements[j].name + '<br>');
+            }
+            document.write('<hr>');
+        }
+    </script>
+</body>
+</html>
+</html>

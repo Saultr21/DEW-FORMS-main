@@ -1,0 +1,25 @@
+<html>
+<head>
+    <title>Los métodos submit() y reset() del objeto Form</title>
+    <script language="JavaScript" type="text/javascript">
+        function funcion_button() {
+            let submit_ok = confirm("Haga clic en Aceptar para enviar el formulario; " +
+                                    "o en Cancelar para reinicializarlo:")
+            
+            if (submit_ok) {
+                document.forms[0].submit()
+            }
+            else {
+                document.forms[0].reset()
+            }
+        }
+    </script>
+</head>
+<body>
+    <form action="mailto:nobody@punto.es" method="post">
+        <input type="text" name="text_field" placeholder="Texto predeterminado">
+        <br>
+        <input type="button" value="Enviar / Reinicializar" onClick="funcion_button()">
+    </form>
+</body>
+</html>

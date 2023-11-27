@@ -1,0 +1,24 @@
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Método reset()</title>
+	<script type="text/javascript">
+		function resetForm() {
+			document.getElementById("userForm").reset();
+		} 
+	</script>
+</head>
+<body>
+	<div style="background: #ff9900; width:'100%';" >
+			<b>Reset Example</b>
+		</div>
+			<div style="background: #0099ff; width:'100%';">
+				<form id="userForm">
+					<p>Name <input type="text" id="txtname" /></p>
+					<p>Age&nbsp;&nbsp;&nbsp;<input type="text" id="txtage" /></p>
+					<p> <input type="button" value="Reset all fields" onClick="resetForm()" /></p>
+				</form>
+			</div>
+</body>
+</html>

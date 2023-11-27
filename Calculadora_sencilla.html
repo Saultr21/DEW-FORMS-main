@@ -1,0 +1,32 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Calculadora sencilla</title>
+    <script>
+        function calcula(operacion) {
+            let operando1 = document.calc.operando1.value
+            let operando2 = document.calc.operando2.value
+            let result = eval(operando1 + operacion + operando2)
+            document.calc.resultado.value = result
+        } 
+    </script>
+</head>
+<body>
+    <h1>Calculadora sencilla</h1>
+    <br>
+    <form name="calc">
+        <input type="Number" name="operando1" value="" size="12">
+        <br>
+        <input type="Number" name="operando2" value="" size="12">
+        <br><br><br><br><br>
+        <input type="Button" name="" value=" + " onclick="calcula('+')">
+        <input type="Button" name="" value=" - " onclick="calcula('-')">
+        <input type="Button" name="" value=" X " onclick="calcula('*')">
+        <input type="Button" name="" value=" / " onclick="calcula('/')">
+        <br><br><br><br><br>
+        <input type="Text" name="resultado" value="0" size="12">
+    </form>
+</body>
+</html>
